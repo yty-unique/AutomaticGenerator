@@ -1,4 +1,7 @@
 package main.login;
+/**
+ * 用户类
+ */
 
 import java.util.Scanner;
 import main.users.DefaultUsers;

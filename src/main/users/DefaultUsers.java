@@ -1,5 +1,9 @@
 package main.users;
 
+/**
+ * 默认用户类
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import main.problem.Generate;
@@ -18,6 +22,7 @@ public class DefaultUsers {
   String defaultPasswd = "123";
   /* 出题对象实例化 */
   Generate generate;
+
   /**
    * getDefaultUser 获取用户列表
    *
@@ -39,7 +44,7 @@ public class DefaultUsers {
     /* 添加默认用户 */
     for (int i = 0; i < defaultName.length; i++) {
       for (int j = 0; j < defaultNumber; j++) {
-        User user = new User(defaultName[i] + (j + 1), defaultPasswd, defaultType[i],generate);
+        User user = new User(defaultName[i] + (j + 1), defaultPasswd, defaultType[i], generate);
         myUser.add(user);
       }
     }

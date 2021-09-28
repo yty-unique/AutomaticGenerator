@@ -1,5 +1,8 @@
 package main.problem;
 
+/**
+ * 题目工厂接口的实现
+ */
 public class Generate implements ProblemFactory {
 
   @Override

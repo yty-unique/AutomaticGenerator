@@ -3,7 +3,7 @@ package main.users;
 import main.problem.Generate;
 
 /**
- * 删除用户类
+ * 增加用户类
  */
 
 public class AddUser {

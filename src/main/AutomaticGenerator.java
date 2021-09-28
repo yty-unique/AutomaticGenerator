@@ -4,6 +4,9 @@ import main.login.Login;
 import main.problem.Generate;
 import main.users.*;
 
+/**
+ * 程序主类
+ */
 public class AutomaticGenerator {
 
   public static void main(String[] args) {
