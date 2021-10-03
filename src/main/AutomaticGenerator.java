@@ -1,15 +1,15 @@
 package main;
 
 import main.login.Login;
-import main.problem.Generate;
+import main.login.LoginUI;
 import main.users.*;
-
 /**
  * 程序主类
  */
 public class AutomaticGenerator {
 
   public static void main(String[] args) {
+    new LoginUI();
     DefaultUsers defaultUsers = new DefaultUsers();
     defaultUsers.initUser();
     /* login 用户鉴权 */
