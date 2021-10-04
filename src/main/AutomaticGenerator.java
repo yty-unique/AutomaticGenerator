@@ -1,15 +1,17 @@
 package main;
 
-import main.login.Login;
-import main.login.LoginUI;
+import main.login.attribute.Login;
+import main.login.pages.Register;
 import main.users.*;
+
 /**
  * 程序主类
  */
 public class AutomaticGenerator {
 
   public static void main(String[] args) {
-    new LoginUI();
+//    new LoginUI();
+    new Register();
     DefaultUsers defaultUsers = new DefaultUsers();
     defaultUsers.initUser();
     /* login 用户鉴权 */

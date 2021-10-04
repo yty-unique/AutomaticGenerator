@@ -1,24 +1,22 @@
-package main.login;
+package main.login.pages;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
 
 import java.awt.Font;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import main.login.button.RoundRectButton;
 
 public class LoginUI {
 
   public LoginUI() {
     /* 初始化窗体 */
-    JFrame loginStart = new JFrame("背景图片测试");
+    JFrame loginStart = new JFrame("数学试卷生成系统");
     loginStart.setSize(400, 700);
     loginStart.setLocationRelativeTo(null);//居中显示
 
@@ -32,27 +30,52 @@ public class LoginUI {
     loginStart.getLayeredPane().setLayout(null);
     loginStart.getLayeredPane()
         .add(label, Integer.valueOf(Integer.MIN_VALUE));// 把背景图片添加到分层窗格的最底层作为背景
+    imagePanel.setLayout(null);
 
     /* 设置界面欢迎语 */
-    JLabel welcomeJlable = new JLabel("欢迎来到数学答题生成系统");
-    imagePanel.setLayout(null);
-    welcomeJlable.setFont(new Font("微软雅黑",0,25));
+    JLabel welcomeJlable = new JLabel("欢迎来到数学试卷生成系统");
+    welcomeJlable.setFont(new Font("微软雅黑", 0, 25));
     welcomeJlable.setForeground(Color.CYAN);
-    welcomeJlable.setBounds(50,150,300,90);
+    welcomeJlable.setBounds(50, 150, 300, 90);
 
     /* 添加账号面板 */
+    JLabel userID = new JLabel("账号");
+    userID.setForeground(Color.white);
+    userID.setBounds(75, 250, 190, 30);
+    userID.setFont(new Font("微软雅黑", 0, 18));
     JTextField userName = new JTextField();
-    userName.setSize(150,20);
-    imagePanel.setLayout(null);
-    userName.setBounds(100,250,190,30);
+    userName.setSize(150, 20);
+    userName.setBounds(120, 250, 190, 30);
+    userName.setFont(new Font("微软雅黑", 0, 16));
+    imagePanel.add(userID);
     imagePanel.add(userName);
 
     /* 添加密码面板 */
+    JLabel userPasswd = new JLabel("密码");
+    userPasswd.setForeground(Color.white);
+    userPasswd.setBounds(75, 290, 190, 30);
+    userPasswd.setFont(new Font("微软雅黑", 0, 18));
     JPasswordField passWord = new JPasswordField();
-    passWord.setSize(150,20);
+    passWord.setSize(150, 20);
     imagePanel.setLayout(null);
-    passWord.setBounds(100,290,190,30);
+    passWord.setBounds(120, 290, 190, 30);
+    passWord.setFont(new Font("微软雅黑", 0, 18));
+    imagePanel.add(userPasswd);
     imagePanel.add(passWord);
+
+    /* 添加登陆注册按钮 */
+    RoundRectButton signIn = new RoundRectButton("登录");
+    signIn.setFont(new Font("微软雅黑", 0, 14));
+    signIn.setBounds(100, 360, 80, 30);
+    signIn.setForeground(Color.WHITE);
+    signIn.setBackground(new Color(0, 191, 255));
+    RoundRectButton register = new RoundRectButton("注册");
+    register.setFont(new Font("微软雅黑", 0, 14));
+    register.setBounds(200, 360, 80, 30);
+    register.setForeground(Color.WHITE);
+    register.setBackground(new Color(0, 191, 255));
+    imagePanel.add(signIn);
+    imagePanel.add(register);
 
     imagePanel.add(welcomeJlable);
     loginStart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

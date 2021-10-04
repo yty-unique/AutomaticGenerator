@@ -1,4 +1,4 @@
-package main.login;
+package main.login.attribute;
 /**
  * 用户类
  */
